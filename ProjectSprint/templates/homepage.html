@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block home_page %}
+<h1>Homepage</h1>
+<p>Welcome to Yu-Gi-GO! This is your home to store a virtual catalog of
+ many of your favorite cards, as well as see how much they are worth.</p>
+<h2>How to use:</h2>
+<p>1. Click on the <a href="{{ url_for('views.card_database')}}">Card Database</a> button to see what cards you want to add to your catalog.</p>
+<p>2. When you find a card you want to add, you can choose to add 1, 2 or 3 copies to the catalog.</p>
+<p>3. After adding all of your desired cards, click on the <a href="{{ url_for('views.my_cards')}}">My Cards</a> button to view your catalog.</p>
+<p>4. In <a href="{{ url_for('views.my_cards')}}">My Cards</a> you can choose to change the rarity of your card, which will update the value.</p>
+<p>5. You may remove any card from your library utilizing the delete feature in <a href="{{ url_for('views.my_cards')}}">My Cards</a>.</p>
+<p>NOTE: Click <a href="{{ url_for('views.help')}}">Here</a> for further help or FAQs.</p>
+{% endblock %}

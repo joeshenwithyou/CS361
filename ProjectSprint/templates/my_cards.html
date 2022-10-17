@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block my_cards_page %}
+<h1>This is the My Cards page!</h1>
+<table>
+    <tr>
+        <th>Rarity</th>
+        <th>Name</th>
+        <th>Card Type</th>
+        <th>Value</th>
+        <th>Quantity</th>
+    </tr>
+    <tr>
+        <td>Common</td>
+        <td><a href="https://yugipedia.com/wiki/Red-Eyes_Black_Dragon">Red-Eyes Black Dragon</a></td>
+        <td>Monster</td>
+        <td>$0.25</td>
+        <td>3</td>
+    </tr>
+</table>
+    <script>
+      window.addEventListener("beforeunload", function (e) {
+        // Cancel the event
+        e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+        // Chrome requires returnValue to be set
+        e.returnValue = "";
+      });
+    </script>
+{% endblock %}

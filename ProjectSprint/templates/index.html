@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+    <image style="max-width: 25%; height: auto;" src="{{ url_for('static', filename='images/Logo.svg') }}" >
+        <h1>Yu-Gi-GO!</h1>
+        <h2>Create a virtual Yu-Gi-Oh! card catalog</h2>
+        <nav>
+            <a href="{{ url_for('views.home')}}" class="tooltip">Homepage
+                <span class="tooltiptext">To the homepage</span></a>
+            <a href="{{ url_for('views.card_database')}}" class="tooltip">Card Database
+                <span class="tooltiptext">To add cards to your card catalog</span></a>
+            <a href="{{ url_for('views.my_cards')}}" class="tooltip">My Cards
+                <span class="tooltiptext">To view and edit the cards in your card catalog</span></a>
+            <a href="{{ url_for('views.help')}}" class="tooltip">Help & FAQs
+                <span class="tooltiptext">To help with Yu-Gi-GO! and Frequently Asked Questions</span></a>
+        </nav>
+        {% block home_page %}
+        {% endblock %}
+        {% block help_page %}
+        {% endblock %}
+        {% block card_database_page %}
+        {% endblock %}
+        {% block my_cards_page %}
+        {% endblock %}
+    <script
+            type="text/javascript"
+            src="{{ url_for('static', filename='index.js')}}"
+    ></script>
+</body>
+<footer>
+    Copyright &copy; Josiah Potts, Software Engineering I Project, {{ now }}
+</footer>
+</html>
